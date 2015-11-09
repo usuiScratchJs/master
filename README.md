@@ -5,7 +5,7 @@
 
 - リポジトリをclone
 - 課題ごとにmission_01 みたいなブランチを切るのでpull
-- 各自自分の名前でブランチを上記でpullしたブランチから切る。feature/は付けなくて良い
+- 各自自分の名前でブランチを上記でpullしたブランチから切る。例 feature/cho_usui
 - distディレクトリ内で作業
 - 作業後自分のブランチをUP
 - css ./css/style.cssを編集
