@@ -8,7 +8,6 @@ uglify     = require 'gulp-uglify' #js圧縮
 source     = require 'vinyl-source-stream' #gulp で Browserify を扱う際に利用
 buffer     = require 'vinyl-buffer'
 transform  = require 'vinyl-transform'
-vueify     = require 'vueify'
 
 consolidate   = require 'gulp-consolidate' #gulpfileの変数をテンプレートエンジンで使用するためのモジュール
 
@@ -101,7 +100,6 @@ gulp.task 'js', ->
             './src/js/app.js'
         ]
     .transform 'babelify'
-    .transform 'vueify'
     .bundle()
     .pipe source 'app.js'
     .pipe gulp.dest distJs
