@@ -1,6 +1,6 @@
 #javascript of the usui, by the usui, for the usui
 
-#Flow
+##Flow
 ***
 
 - リポジトリをclone
@@ -11,14 +11,14 @@
 - html index.htmlを編集
 - js js/app.jsを編集 上部に色々書いてあるが無視して5行目くらいから書いて下さい jqueryはすでに読み込んであります
 
-#Git
+##Git
 ***
 
 - gitがわからない人はhttp://www.backlog.jp/git-guide/を参考に
 - gitマスターのusuiに聞いても良い
 
 
-#local
+##local
 ***
 
 - ローカル環境入れておいたので使いたい人はどうぞ
