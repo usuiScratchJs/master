@@ -6,3 +6,14 @@
 console.log('aaaa');
 
 },{}]},{},[1]);
+
+$(function() {
+    $(".tabBlock li").click(function() {
+        var num = $(".tabBlock li").index(this);
+        $(".tabInner p").addClass('hide');
+        $(".tabInner p").eq(num).removeClass('hide');
+        $(".tabBlock li").removeClass('here');
+        $(this).addClass('here')
+    });
+})
+
