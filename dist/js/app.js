@@ -1,8 +1,34 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/*ここからjs 下記は例なので削除*/
 
-'use strict';
 
-console.log('aaaa');
 
-},{}]},{},[1]);
+$(function(){
+
+    /*クリックしたときのファンクションをまとめて指定*/
+    $('.tabBlock li').click(function() {
+
+        /*.index()を使いクリックされたタブが何番目かを調べ、
+        indexという変数に代入。*/
+        var index = $('.tabBlock li').index(this);
+		
+        /*tabInnerとp（文章）を一度すべて非表示にし、*/
+        $('.tabInner p')
+		.css('display','none');
+
+       /*クリックされたタブと同じ順番のコンテンツを表示。
+	   （HTMLの順番のような気がする）*/
+        $('.tabInner p')
+		.eq(index)
+		.css('display','block');
+
+       /*一度タブについているクラスselectを消し※selectにドットはいらない！*/
+        $('.tabBlock li').removeClass('select');
+
+        /*クリックされたタブのみにクラスselectをつけます。*/
+        $(this).addClass('select');
+
+    });
+
+});
+
+
+
