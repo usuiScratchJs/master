@@ -1,23 +1,22 @@
 var i = document.querySelectorAll('.button');
-var r = document.querySelectorAll('.tabInner');
 var o = document.querySelectorAll('.cont');
-var oNum = o.length;
-//for(var num = 0, length = i.length; num < length; num++){
-//    (function(art){
-//        i[num].addEventListener("click",function(){
-//            r.classList.add('none');
-//            //document.querySelectorAll('.tabInner > p')[art].classList.add('block');
-//        }, false);
-//    })(num);
-//}
+//var a = document.querySelectorAll('active');
+
 
 for(var num = 0, length = i.length; num < length; num++) {
     o[num].classList.add('none');
+    o[0].classList.remove('none');
+    o[0].classList.add('active');
     (function (art) {
         i[num].addEventListener("click", function () {
-            //r.classList.add('none');
+            //a.classList.remove('active');
+            //a.classList.add('none');
+            //o[0].classList.remove('active');
+            o[0].classList.add('none');
+            o[1].classList.add('none');
+            o[2].classList.add('none');
             o[art].classList.remove('none');
-            console.log(oNum)
+            o[art].classList.add('active');
         }, false);
     })(num);
 }
