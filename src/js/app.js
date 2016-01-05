@@ -1,11 +1,12 @@
-var tabSwitch = function() {
-    var $trigger = document.querySelectorAll('.button');
-    var $target = document.querySelectorAll('.cont');
-    var $active;
-    for (var num = 0, length = $trigger.length; num < length; num++) {
+var tabSwitch = function(active_num) {
+    var $trigger = document.querySelectorAll('.button'),
+        $target = document.querySelectorAll('.cont'),
+        $active,
+        length = $trigger.length;
+    for (var num = 0; num < length; num++) {
         $target[num].classList.add('none');
-        $target[0].classList.remove('none');
-        $target[0].classList.add('active');
+        $target[active_num].classList.remove('none');
+        $target[active_num].classList.add('active');
         (function (index) {
             $trigger[num].addEventListener("click", function(){
                 $active = document.querySelector('.active');
@@ -17,7 +18,6 @@ var tabSwitch = function() {
         })(num);
     }
 };
-
-tabSwitch();
+tabSwitch(0);
 
 
