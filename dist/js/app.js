@@ -21,6 +21,17 @@ var tabSwitch = function tabSwitch(active_num) {
         })(num);
     }
 };
+var hoge = function hoge() {
+    var index = 0,
+        $trigger = $('[data-hoge-trigger=hoge]');
+    $trigger.on('click', function () {
+        index = index + 10;
+        console.log(index);
+    });
+};
 tabSwitch(0);
+$(function () {
+    hoge();
+});
 
 },{}]},{},[1]);

@@ -18,6 +18,17 @@ var tabSwitch = function(active_num) {
         })(num);
     }
 };
+var hoge = function(){
+    var index = 0,
+        $trigger = $('[data-hoge-trigger=hoge]')
+    $trigger.on('click',function(){
+        index = index + 10;
+        console.log(index);
+    })
+};
 tabSwitch(0);
+$(function(){
+   hoge();
+});
 
 
