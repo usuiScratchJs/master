@@ -5,19 +5,36 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/lib/bundle.min.js"></script>
+    <style>
+      #box2,#box3{display: none;}
+    </style>
   </head>
   <body id="app">
     <h1>Tab</h1>
     <ul class="tabBlock">
-      <li class="button">hoge1</li>
-      <li class="button">hoge2</li>
-      <li class="button">hoge3</li>
+      <li id="tab1">hoge1</li>
+      <li id="tab2">hoge2</li>
+      <li id="tab3">hoge3</li>
     </ul>
     <div class="tabInner">
-      <p>hoge1hoge1hoge1hoge1hoge1hoge1</p>
-      <p>hoge2hoge2hoge2hoge2hoge2hoge2</p>
-      <p>hoge3hoge3hoge3hoge3hoge3hoge3</p>
+      <p id="box1">hoge1hoge1hoge1hoge1hoge1hoge1</p>
+      <p id="box2">hoge2hoge2hoge2hoge2hoge2hoge2</p>
+      <p id="box3">hoge3hoge3hoge3hoge3hoge3hoge3</p>
     </div>
+    <script>
+      $("#tab1").click(function(){
+        $("#box1").css("display","block");
+        $("#box2,#box3").css("display","none");
+      });
+      $("#tab2").click(function(){
+        $("#box2").css("display","block");
+        $("#box1,#box3").css("display","none");
+      });
+      $("#tab3").click(function(){
+        $("#box3").css("display","block");
+        $("#box1,#box2").css("display","none");
+      });
+    </script>
     <script src="js/app.js"></script>
   </body>
 </html>
