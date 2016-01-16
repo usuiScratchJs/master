@@ -8,13 +8,13 @@ html(lang='ja')
     body#app
         h1 Tab
         ul.tabBlock
-            li.button hoge1
-            li.button hoge2
-            li.button hoge3
+            li.button(data-tab-trigger="tab") hoge1
+            li.button(data-tab-trigger="tab") hoge2
+            li.button(data-tab-trigger="tab") hoge3
         .tabInner
-            p.cont hoge1hoge1hoge1hoge1hoge1hoge1
-            p.cont hoge2hoge2hoge2hoge2hoge2hoge2
-            p.cont hoge3hoge3hoge3hoge3hoge3hoge3
+            p.cont(data-tab-target="tab") hoge1hoge1hoge1hoge1hoge1hoge1
+            p.cont(data-tab-target="tab") hoge2hoge2hoge2hoge2hoge2hoge2
+            p.cont(data-tab-target="tab") hoge3hoge3hoge3hoge3hoge3hoge3
         .button_increase(data-hoge-trigger="hoge")
             p click me
         script(src='js/app.js')

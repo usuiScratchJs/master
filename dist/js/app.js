@@ -21,6 +21,21 @@ var tabSwitch = function tabSwitch(active_num) {
         })(num);
     }
 };
+
+//var tabswitch = function(active_num){
+//    var $trigger = $('[data-tab-trigger]'),
+//        $target = $('[data-tab-target]'),
+//        $active;
+//    $target.addClass('none');
+//    $target.eq(active_num).addClass('active').removeClass('none');
+//    $trigger.on('click',function(){
+//        var num = $(this).index(),
+//            $active = $('.active');
+//        $active.addClass('none').removeClass('active');
+//        $target.eq(num).removeClass('none').addClass('active');
+//    })
+//};
+
 var hoge = function hoge() {
     var index = 0,
         $trigger = $('[data-hoge-trigger=hoge]');
@@ -29,9 +44,11 @@ var hoge = function hoge() {
         console.log(index);
     });
 };
+
 tabSwitch(0);
 $(function () {
     hoge();
+    //tabswitch(0);
 });
 
 },{}]},{},[1]);
