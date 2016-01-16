@@ -18,11 +18,13 @@ $(function() {
 })
 
 $(function() {
-	var hoge = (".hoge");
+	var hoge = (".hoge"),
+	dft = (10),
+	num = (dft+10),
+	rst = num;
 
     $(hoge).click(function(){
-	console.count(hoge);
+	console.log(rst);
     })
 });
-
 
