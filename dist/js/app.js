@@ -18,14 +18,11 @@ $(function() {
 })
 
 $(function() {
-	var hoge = (".hoge"),
-    var index = 0;
+	var hoge = (".hoge");
 
-    $(.hoge).click(function(){
-        index = index+10
+    $(hoge).click(function(){
+	console.count(hoge);
     })
-	console.log(index);
-})
-
+});
 
 
