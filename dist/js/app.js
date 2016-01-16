@@ -18,13 +18,9 @@ $(function() {
 })
 
 $(function() {
-	var hoge = (".hoge"),
-	dft = (10),
-	num = (dft+10),
-	rst = num;
-
-    $(hoge).click(function(){
-	console.log(rst);
+	var hoge = (0);
+    $(".hoge").on('click',function(){
+        hoge = hoge + 10;
+        console.log(hoge);
     })
 });
-
