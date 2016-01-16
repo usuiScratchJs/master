@@ -18,15 +18,14 @@ $(function() {
 })
 
 $(function() {
-	var hoge1 = (".hoge1")
-	var hoge2 = (".hoge2")
-	var hoge3 = (".hoge3")
+	var hoge = (".hoge"),
+    var index = 0;
 
-	console.log("hoge1",10);
-	console.log("hoge2",20);
-	console.log("hoge3",30);
-});
-
+    $(.hoge).click(function(){
+        index = index+10
+    })
+	console.log(index);
+})
 
 
 
